@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  butlarr:
+    build: .
+    environment:
+      - TELEGRAM_TOKEN=<YOUR_TELEGRAM_TOKEN>
+      - AUTH_PASSWORD=<A_SECURE_PASSWORD>
+      - RADARR_API_URL=http://localhost:7878
+      - RADARR_API_KEY=<RADARR_API_KEY>
+      - SONARR_API_URL=http://localhost:8989
+      - SONARR_API_KEY=<SONARR_API_KEY>
+    ports:
+      - "8000:8000"
